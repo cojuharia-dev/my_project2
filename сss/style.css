@@ -1,0 +1,49 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e6f2ff;
+    margin: 20px;
+}
+
+/* Навигация */
+nav {
+    background-color: #004080;
+    padding: 10px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-right: 15px;
+}
+
+/* Заголовки */
+h1 {
+    color: #003366;
+}
+
+h2 {
+    color: #0059b3;
+}
+
+/* Блоки */
+p {
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+/* Таблица */
+table {
+    background-color: white;
+}
+
+th {
+    background-color: #99ccff;
+}
+
+/* Картинки */
+img {
+    border-radius: 10px;
+    margin: 10px 0;
+}
+}
