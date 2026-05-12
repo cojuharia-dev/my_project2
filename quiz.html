@@ -1,0 +1,85 @@
+<html>
+<head>
+    <title>Тест</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <a href="index.html">Главная</a> 
+    <a href="rules.html">Правила</a> 
+    <a href="teams.html">Команды</a> 
+    <a href="gallery.html">Галерея</a> 
+    <a href="quiz.html">Тест</a>
+<hr>
+
+<h1>🧠 Тест по водному поло</h1>
+
+<form id="quizForm">
+
+<p>1. Сколько игроков в команде?</p>
+<input type="radio" name="q1" value="0"> 5<br>
+<input type="radio" name="q1" value="1"> 7<br>
+<input type="radio" name="q1" value="0"> 9<br>
+
+<hr>
+
+<p>2. Можно ли касаться дна?</p>
+<input type="radio" name="q2" value="0"> Да<br>
+<input type="radio" name="q2" value="1"> Нет<br>
+
+<hr>
+
+<p>3. Где проходит игра?</p>
+<input type="radio" name="q3" value="0"> На поле<br>
+<input type="radio" name="q3" value="1"> В воде<br>
+
+<hr>
+
+<p>4. Сколько периодов в игре?</p>
+<input type="radio" name="q4" value="0"> 2<br>
+<input type="radio" name="q4" value="1"> 4<br>
+<input type="radio" name="q4" value="0"> 6<br>
+
+<hr>
+
+<p>5. Как держат мяч?</p>
+<input type="radio" name="q5" value="1"> Одной рукой<br>
+<input type="radio" name="q5" value="0"> Двумя руками<br>
+
+<hr>
+
+<button type="button" onclick="checkQuiz()">Проверить</button>
+
+</form>
+
+<h2 id="result"></h2>
+
+<script>
+function checkQuiz() {
+    let score = 0;
+    let form = document.forms["quizForm"];
+
+    for (let i = 1; i <= 5; i++) {
+        let answers = form["q" + i];
+        for (let j = 0; j < answers.length; j++) {
+            if (answers[j].checked) {
+                score += Number(answers[j].value);
+            }
+        }
+    }
+
+    let resultText = "Ваш результат: " + score + " из 5";
+
+    if (score == 5) {
+        resultText += " 🏆 Отлично!";
+    } else if (score >= 3) {
+        resultText += " 👍 Хорошо!";
+    } else {
+        resultText += " ❗ Попробуйте ещё раз";
+    }
+
+    document.getElementById("result").innerText = resultText;
+}
+</script>
+
+</body>
+</html>
