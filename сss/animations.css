@@ -1,9 +1,8 @@
-
 .fade {
-    animation: fadeIn 2s;
+    animation: fadein 2s;
 }
 
-@keyframes fadeIn {
+@keyframes fadein {
     from { opacity: 0; }
     to { opacity: 1; }
 }
